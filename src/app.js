@@ -15,12 +15,17 @@ const accountRouter = require("./routes/account.route");
 const transactionRoutes = require("./routes/transaction.route");
 
 
+// Dummy api
+app.get("/", (req, res) => {
+  res.send("Welcome to the Banking api!!!")
+})
+
 /**
  * - Using  the routes
  */
 app.use("/api/auth", authRouter);
 app.use("/api/accounts", accountRouter);
-app.use("/api/transactions",transactionRoutes); 
+app.use("/api/transactions",transactionRoutes);
 
 
 
