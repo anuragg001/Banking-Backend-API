@@ -15,4 +15,10 @@ router.post("/register", authController.userRegisterController);
 
 router.post("/login", authController.userLoginController);
 
+// @route   POST api/auth/logout
+// @desc    Logout user
+// @access  Private
+
+router.post("/logout", authController.userLogoutController);
+
 module.exports = router;
