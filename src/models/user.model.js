@@ -21,7 +21,15 @@ const userSchema = new mongoose.Schema({
     required: true,
     minLength: 6,
     select: false
+  },
+
+  systemUser: {
+    type: Boolean,
+    default: false,
+    immutable: true,
+    select: false,
   }
+
 }, { timestamps: true });
 
 
